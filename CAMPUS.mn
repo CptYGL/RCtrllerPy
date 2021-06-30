@@ -1,0 +1,256 @@
+{
+    "application": {
+        "dpctl": "",
+        "ipBase": "10.0.0.0/8",
+        "netflow": {
+            "nflowAddId": "0",
+            "nflowTarget": "",
+            "nflowTimeout": "600"
+        },
+        "openFlowVersions": {
+            "ovsOf10": "1",
+            "ovsOf11": "0",
+            "ovsOf12": "0",
+            "ovsOf13": "0"
+        },
+        "sflow": {
+            "sflowHeader": "128",
+            "sflowPolling": "30",
+            "sflowSampling": "400",
+            "sflowTarget": ""
+        },
+        "startCLI": "1",
+        "switchType": "ovs",
+        "terminalType": "xterm"
+    },
+    "controllers": [
+        {
+            "opts": {
+                "controllerProtocol": "tcp",
+                "controllerType": "remote",
+                "hostname": "CTRL",
+                "remoteIP": "127.0.0.1",
+                "remotePort": 6633
+            },
+            "x": "420.0",
+            "y": "36.0"
+        }
+    ],
+    "hosts": [
+        {
+            "number": "2",
+            "opts": {
+                "hostname": "DEVELOP",
+                "ip": "10.0.10.2",
+                "nodeNum": 2,
+                "sched": "host"
+            },
+            "x": "238.0",
+            "y": "518.0"
+        },
+        {
+            "number": "5",
+            "opts": {
+                "hostname": "WORK_2",
+                "ip": "10.0.20.2",
+                "nodeNum": 5,
+                "sched": "host"
+            },
+            "x": "450.0",
+            "y": "506.0"
+        },
+        {
+            "number": "4",
+            "opts": {
+                "hostname": "WORK_1",
+                "ip": "10.0.20.1",
+                "nodeNum": 4,
+                "sched": "host"
+            },
+            "x": "400.0",
+            "y": "428.0"
+        },
+        {
+            "number": "6",
+            "opts": {
+                "hostname": "WORK_3",
+                "ip": "10.0.20.3",
+                "nodeNum": 6,
+                "sched": "host"
+            },
+            "x": "524.0",
+            "y": "434.0"
+        },
+        {
+            "number": "7",
+            "opts": {
+                "hostname": "STU_1",
+                "ip": "10.0.30.1",
+                "nodeNum": 7,
+                "sched": "host"
+            },
+            "x": "626.0",
+            "y": "430.0"
+        },
+        {
+            "number": "9",
+            "opts": {
+                "hostname": "STU_3",
+                "ip": "10.0.30.3",
+                "nodeNum": 9,
+                "sched": "host"
+            },
+            "x": "740.0",
+            "y": "428.0"
+        },
+        {
+            "number": "3",
+            "opts": {
+                "hostname": "TEST",
+                "ip": "10.0.10.3",
+                "nodeNum": 3,
+                "sched": "host"
+            },
+            "x": "308.0",
+            "y": "448.0"
+        },
+        {
+            "number": "1",
+            "opts": {
+                "hostname": "RESEARCH",
+                "ip": "10.0.10.1",
+                "nodeNum": 1,
+                "sched": "host"
+            },
+            "x": "196.0",
+            "y": "440.0"
+        },
+        {
+            "number": "8",
+            "opts": {
+                "hostname": "STU_2",
+                "ip": "10.0.30.2",
+                "nodeNum": 8,
+                "sched": "host"
+            },
+            "x": "682.0",
+            "y": "514.0"
+        }
+    ],
+    "links": [
+        {
+            "dest": "WORK_1",
+            "opts": {},
+            "src": "S_LIB"
+        },
+        {
+            "dest": "WORK_2",
+            "opts": {},
+            "src": "S_LIB"
+        },
+        {
+            "dest": "WORK_3",
+            "opts": {},
+            "src": "S_LIB"
+        },
+        {
+            "dest": "STU_1",
+            "opts": {},
+            "src": "S_DOM"
+        },
+        {
+            "dest": "STU_2",
+            "opts": {},
+            "src": "S_DOM"
+        },
+        {
+            "dest": "STU_3",
+            "opts": {},
+            "src": "S_DOM"
+        },
+        {
+            "dest": "S_LAB",
+            "opts": {},
+            "src": "S_LIB"
+        },
+        {
+            "dest": "S_DOM",
+            "opts": {},
+            "src": "S_LIB"
+        },
+        {
+            "dest": "S_DOM",
+            "opts": {},
+            "src": "S_LAB"
+        },
+        {
+            "dest": "RESEARCH",
+            "opts": {},
+            "src": "S_LAB"
+        },
+        {
+            "dest": "DEVELOP",
+            "opts": {},
+            "src": "S_LAB"
+        },
+        {
+            "dest": "TEST",
+            "opts": {},
+            "src": "S_LAB"
+        }
+    ],
+    "switches": [
+        {
+            "number": "1",
+            "opts": {
+                "controllers": [
+                    "CTRL"
+                ],
+                "dpid": "00000002",
+                "hostname": "S_LIB",
+                "netflow": "0",
+                "nodeNum": 1,
+                "sflow": "0",
+                "switchIP": "10.0.20.254",
+                "switchType": "ovs"
+            },
+            "x": "490.0",
+            "y": "170.0"
+        },
+        {
+            "number": "3",
+            "opts": {
+                "controllers": [
+                    "CTRL"
+                ],
+                "dpid": "00000003",
+                "hostname": "S_DOM",
+                "netflow": "0",
+                "nodeNum": 3,
+                "sflow": "0",
+                "switchIP": "10.0.30.254",
+                "switchType": "ovs"
+            },
+            "x": "675.0",
+            "y": "263.0"
+        },
+        {
+            "number": "2",
+            "opts": {
+                "controllers": [
+                    "CTRL"
+                ],
+                "dpid": "00000001",
+                "hostname": "S_LAB",
+                "netflow": "0",
+                "nodeNum": 2,
+                "sflow": "0",
+                "switchIP": "10.0.10.254",
+                "switchType": "ovs"
+            },
+            "x": "312.0",
+            "y": "250.0"
+        }
+    ],
+    "version": "2"
+}
